@@ -45,13 +45,11 @@
     "clean:build": "rm -rf lib index *.d.ts loader template* types utils",
     "format": "pretty-quick",
     "husky": "pretty-quick --staged && yarn test",
-    "prepare": "husky install",
-    "prepublish": "yarn test && yarn build",
+    "prepare": "yarn build",
     "test": "cross-env NODE_ENV=test jest --env=jsdom",
     "test:coverage": "cross-env NODE_ENV=test jest --env=jsdom --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --env=jsdom --watch",
-    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && node build-packages.js",
-    "postinstall": "node ./postinstall-message.js"
+    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && node build-packages.js"
   },
   "devDependencies": {
     "@babel/cli": "7.20.7",
