@@ -38,13 +38,7 @@ Since **this plugin uses TypeScript compiler** dependency, and we don't want you
 This way you can save this as `devDependencies` instead of dependencies.
 
 ```sh
-yarn add next-translate-plugin -D
-```
-
-or
-
-```sh
-npm install next-translate-plugin --save-dev
+pnpm add -D next-translate-plugin
 ```
 
 ## Documentation
