@@ -40,12 +40,12 @@
     "postinstall-message.js"
   ],
   "scripts": {
-    "build": "yarn clean && cross-env NODE_ENV=production && yarn tsc",
-    "clean": "yarn clean:build",
+    "build": "pnpm clean && cross-env NODE_ENV=production && pnpm tsc",
+    "clean": "pnpm clean:build",
     "clean:build": "rm -rf lib index *.d.ts loader template* types utils",
     "format": "pretty-quick",
-    "husky": "pretty-quick --staged && yarn test",
-    "prepare": "yarn build",
+    "husky": "pretty-quick --staged && pnpm test",
+    "prepare": "pnpm build",
     "test": "cross-env NODE_ENV=test jest --env=jsdom",
     "test:coverage": "cross-env NODE_ENV=test jest --env=jsdom --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --env=jsdom --watch",
@@ -53,7 +53,7 @@
   },
   "devDependencies": {
     "@babel/cli": "7.20.7",
-    "@babel/core": "7.20.12",
+    "@babel/core": "7.28.6",
     "@babel/preset-env": "7.20.2",
     "@babel/preset-typescript": "7.18.6",
     "@types/jest": "29.2.6",
@@ -102,5 +102,5 @@
       "^.+\\.(j|t)sx?$": "babel-jest"
     }
   },
-  "packageManager": "yarn@1.22.21"
+  "packageManager": "pnpm@10.6.3"
 }

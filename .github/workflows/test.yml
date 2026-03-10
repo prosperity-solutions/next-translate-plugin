@@ -14,11 +14,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install dependencies
+      - name: Install pnpm
         run: |
-          npm install -g yarn
-      - name: yarn install, build, and test
+          npm install -g pnpm
+      - name: pnpm install, build, and test
         run: |
-          yarn install
-          yarn build
-          yarn test
+          pnpm install
+          pnpm build
+          pnpm test
